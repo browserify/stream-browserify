@@ -1,0 +1,25 @@
+{
+  "name": "stream-browserify",
+  "version": "0.0.0",
+  "description": "the stream module from node core for browsers",
+  "main": "index.js",
+  "dependencies": {
+    "inherits": "~2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/stream-browserify.git"
+  },
+  "homepage": "https://github.com/substack/stream-browserify",
+  "keywords": [
+    "stream",
+    "browser",
+    "browserify"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT"
+}
