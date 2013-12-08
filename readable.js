@@ -809,8 +809,8 @@ Readable.prototype.wrap = function(stream) {
   // proxy certain important events.
   var events = ['error', 'close', 'destroy', 'pause', 'resume'];
   forEach(events, function(ev) {
-    stream.on(ev, function () {
-      return self.emit.apply(self, [ev].concat([].slice.call(arguments)));
+    stream.on(ev, function (x) {
+      return self.emit.apply(self, ev, x);
     });
   });
 
