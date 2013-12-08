@@ -28,6 +28,7 @@ var Buffer = require('buffer').Buffer;
 var setImmediate = require('setimmediate');
 var StringDecoder;
 
+var inherits = require('inherits');
 inherits(Readable, Stream);
 
 function ReadableState(options, stream) {
