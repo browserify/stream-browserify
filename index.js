@@ -25,11 +25,11 @@ var EE = require('events').EventEmitter;
 var inherits = require('inherits');
 
 inherits(Stream, EE);
-Stream.Readable = require('_stream_readable');
-Stream.Writable = require('_stream_writable');
-Stream.Duplex = require('_stream_duplex');
-Stream.Transform = require('_stream_transform');
-Stream.PassThrough = require('_stream_passthrough');
+Stream.Readable = require('./readable.js');
+Stream.Writable = require('./writable.js');
+Stream.Duplex = require('./duplex.js');
+Stream.Transform = require('./transform.js');
+Stream.PassThrough = require('./passthrough.js');
 
 // Backwards-compat with node 0.4.x
 Stream.Stream = Stream;
