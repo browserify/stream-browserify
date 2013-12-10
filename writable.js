@@ -28,7 +28,7 @@ Writable.WritableState = WritableState;
 
 var inherits = require('inherits');
 var Stream = require('./index.js');
-var setImmediate = require('setimmediate');
+require('setimmediate');
 var Buffer = require('buffer').Buffer;
 
 inherits(Writable, Stream);
