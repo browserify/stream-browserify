@@ -32,7 +32,6 @@ var Writable = require('./writable.js');
 
 inherits(Duplex, Readable);
 
-Duplex.prototype.pipe = Writable.prototype.pipe;
 Duplex.prototype.write = Writable.prototype.write;
 Duplex.prototype.end = Writable.prototype.end;
 Duplex.prototype._write = Writable.prototype._write;
