@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "inherits": "~2.0.1",
-    "setimmediate": "~1.0.1"
+    "process": "~0.5.1"
   },
   "repository": {
     "type": "git",

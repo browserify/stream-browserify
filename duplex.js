@@ -26,7 +26,7 @@
 
 module.exports = Duplex;
 var inherits = require('inherits');
-var setImmediate = require('setimmediate');
+var setImmediate = require('process/browser.js').nextTick;
 var Readable = require('./readable.js');
 var Writable = require('./writable.js');
 
