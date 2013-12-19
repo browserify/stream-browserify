@@ -167,6 +167,11 @@ Writable.prototype.write = function(chunk, encoding, cb) {
     encoding = null;
   }
 
+  if (chunk instanceof Uint8Array)
+    chunk = new Buffer(chunk);
+  if (chunk instanceof ArrayBuffer)
+    chunk = new Buffer(new Uint8Array(chunk));
+  
   if (Buffer.isBuffer(chunk))
     encoding = 'buffer';
   else if (!encoding)
