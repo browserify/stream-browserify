@@ -7,6 +7,9 @@
     "inherits": "~2.0.1",
     "process": "~0.5.1"
   },
+  "scripts": {
+    "test": "node test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/substack/stream-browserify.git"
@@ -22,5 +25,8 @@
     "email": "mail@substack.net",
     "url": "http://substack.net"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "~2.3.2"
+  }
 }
