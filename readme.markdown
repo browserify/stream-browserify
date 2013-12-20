@@ -2,6 +2,4 @@
 
 the stream module (streams1 for now) from node core
 
-# todo
-
-How much of readable-stream/streams2 do we want to pull in?
+[![build status](https://secure.travis-ci.org/substack/stream-browserify.png)](http://travis-ci.org/substack/stream-browserify)
