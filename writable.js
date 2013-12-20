@@ -26,6 +26,16 @@
 module.exports = Writable;
 Writable.WritableState = WritableState;
 
+var TA = require('typedarray');
+var isUint8Array = typeof Uint8Array !== 'undefined'
+  ? function (x) { return x instanceof Uint8Array }
+  : function () { return false }
+;
+var isArrayBuffer = typeof ArrayBuffer !== 'undefined'
+  ? function (x) { return x instanceof ArrayBuffer }
+  : function () { return false }
+;
+
 var inherits = require('inherits');
 var Stream = require('./index.js');
 var setImmediate = require('process/browser.js').nextTick;
@@ -167,9 +177,9 @@ Writable.prototype.write = function(chunk, encoding, cb) {
     encoding = null;
   }
 
-  if (chunk instanceof Uint8Array)
+  if (isUint8Array(chunk))
     chunk = new Buffer(chunk);
-  if (chunk instanceof ArrayBuffer)
+  if (isArrayBuffer(chunk))
     chunk = new Buffer(new Uint8Array(chunk));
   
   if (Buffer.isBuffer(chunk))
