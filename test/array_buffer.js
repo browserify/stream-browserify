@@ -1,5 +1,9 @@
 var path = require('path');
 var test = require('tape');
+var xUint8Array = typeof Uint8Array === 'undefined'
+    ? require('typedarray').Uint8Array
+    : Uint8Array
+;
 
 var Writable = require('../writable.js');
 var inherits = require('inherits');
@@ -18,7 +22,7 @@ TestWritable.prototype._write = function(chunk, encoding, cb) {
     cb();
 };
 
-var typedArray = new Uint8Array(1);
+var typedArray = new xUint8Array(1);
 typedArray[0] = 88;
 
 test('.writable writing ArrayBuffer', function(t) {
