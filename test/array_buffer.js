@@ -1,10 +1,10 @@
-var util = require('util');
 var path = require('path');
 var test = require('tape');
 
-var Writable = require(path.join(__dirname, 'writable'));
+var Writable = require('../writable.js');
+var inherits = require('inherits');
 
-util.inherits(TestWritable, Writable);
+inherits(TestWritable, Writable);
 
 function TestWritable(opt) {
     if (!(this instanceof TestWritable))
