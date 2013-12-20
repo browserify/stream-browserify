@@ -8,8 +8,7 @@
     "process": "~0.5.1"
   },
   "devDependencies": {
-    "tape": "~2.3.2",
-    "tap": "~0.4.6"
+    "tape": "~2.3.2"
   },
   "scripts": {
     "test": "tap test/*.js"
@@ -30,7 +29,20 @@
     "url": "http://substack.net"
   },
   "license": "MIT",
-  "devDependencies": {
-    "tape": "~2.3.2"
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/16..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
   }
 }

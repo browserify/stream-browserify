@@ -32,7 +32,6 @@ test('.writable writing ArrayBuffer', function(t) {
     t.end()
 });
 
-
 test('.writable writing Uint8array', function(t) {
     var writable = new TestWritable();
     
