@@ -7,8 +7,12 @@
     "inherits": "~2.0.1",
     "process": "~0.5.1"
   },
+  "devDependencies": {
+    "tape": "~2.3.2",
+    "tap": "~0.4.6"
+  },
   "scripts": {
-    "test": "node test.js"
+    "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",

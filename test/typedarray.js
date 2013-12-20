@@ -2,7 +2,7 @@ var test = require('tape');
 var Transform = require('../transform.js');
 var concat = require('concat-stream');
 
-test(function (t) {
+test('array buffer', function (t) {
     t.plan(1);
     
     var stream = new Transform;
