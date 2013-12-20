@@ -26,7 +26,6 @@
 module.exports = Writable;
 Writable.WritableState = WritableState;
 
-var TA = require('typedarray');
 var isUint8Array = typeof Uint8Array !== 'undefined'
   ? function (x) { return x instanceof Uint8Array }
   : function () { return false }
