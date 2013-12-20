@@ -25,16 +25,18 @@ TestWritable.prototype._write = function(chunk, encoding, cb) {
 var typedArray = new xUint8Array(1);
 typedArray[0] = 88;
 
-test('.writable writing ArrayBuffer', function(t) {
-    var writable = new TestWritable();
-    
-    writable.write(typedArray.buffer);
-    writable.end();
-    
-    t.equal(writable._written.length, 1);
-    t.equal(writable._written[0].toString(), 'X')
-    t.end()
-});
+if (typeof Uint8array !== 'undefined') {
+    test('.writable writing ArrayBuffer', function(t) {
+        var writable = new TestWritable();
+        
+        writable.write(typedArray.buffer);
+        writable.end();
+        
+        t.equal(writable._written.length, 1);
+        t.equal(writable._written[0].toString(), 'X')
+        t.end()
+    });
+}
 
 test('.writable writing Uint8array', function(t) {
     var writable = new TestWritable();

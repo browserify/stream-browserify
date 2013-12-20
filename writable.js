@@ -28,11 +28,15 @@ Writable.WritableState = WritableState;
 
 var isUint8Array = typeof Uint8Array !== 'undefined'
   ? function (x) { return x instanceof Uint8Array }
-  : function () { return false }
+  : function (x) {
+    return x && x.constructor && x.constructor.name === 'Uint8Array'
+  }
 ;
 var isArrayBuffer = typeof ArrayBuffer !== 'undefined'
   ? function (x) { return x instanceof ArrayBuffer }
-  : function () { return false }
+  : function () {
+    return x && x.constructor && x.constructor.name === 'ArrayBuffer'
+  }
 ;
 
 var inherits = require('inherits');
@@ -178,7 +182,7 @@ Writable.prototype.write = function(chunk, encoding, cb) {
 
   if (isUint8Array(chunk))
     chunk = new Buffer(chunk);
-  if (isArrayBuffer(chunk))
+  if (isArrayBuffer(chunk) && typeof Uint8Array !== 'undefined')
     chunk = new Buffer(new Uint8Array(chunk));
   
   if (Buffer.isBuffer(chunk))
