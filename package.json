@@ -1,6 +1,6 @@
 {
   "name": "stream-browserify",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "the stream module from node core for browsers",
   "main": "index.js",
   "dependencies": {
@@ -34,10 +34,8 @@
     "files": "test/*.js",
     "browsers": [
       "ie/8..latest",
-      "firefox/16..latest",
-      "firefox/nightly",
-      "chrome/22..latest",
-      "chrome/canary",
+      "firefox/3.5", "firefox/10", "firefox/nightly",
+      "chrome/10","chrome/latest", "chrome/canary",
       "opera/12..latest",
       "opera/next",
       "safari/5.1..latest",
