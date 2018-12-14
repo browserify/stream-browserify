@@ -16,9 +16,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/substack/stream-browserify.git"
+    "url": "git://github.com/browserify/stream-browserify.git"
   },
-  "homepage": "https://github.com/substack/stream-browserify",
+  "homepage": "https://github.com/browserify/stream-browserify",
   "keywords": [
     "stream",
     "browser",
