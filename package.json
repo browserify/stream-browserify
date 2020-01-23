@@ -4,12 +4,12 @@
   "description": "the stream module from node core for browsers",
   "main": "index.js",
   "dependencies": {
-    "inherits": "~2.0.1",
-    "readable-stream": "^3.0.0-rc.2"
+    "inherits": "~2.0.4",
+    "readable-stream": "^3.5.0"
   },
   "devDependencies": {
-    "typedarray": "~0.0.6",
-    "tape": "^4.2.0"
+    "tape": "^4.13.0",
+    "typedarray": "~0.0.6"
   },
   "scripts": {
     "test": "tape test/*.js"
