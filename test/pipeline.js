@@ -1,13 +1,13 @@
 var test = require('tape');
-var pipeline = require('../').pipeline;
-var stream = require('../');
-var from = Buffer.from || Buffer;
+var pipeline = require('stream').pipeline;
+var stream = require('stream');
+var Buffer = require('safe-buffer').Buffer;
 
 test('supports pipeline', function(t) {
     t.plan(4);
     var readable = new stream.Readable({
         read: function () {
-            this.push(from('chunk', 'ascii'));
+            this.push(Buffer.from('chunk', 'ascii'));
         }
     });
     var transform1 = new stream.Transform({

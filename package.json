@@ -8,12 +8,13 @@
     "readable-stream": "^3.5.0"
   },
   "devDependencies": {
+    "browserify": "^16.5.0",
     "safe-buffer": "^5.1.2",
     "tape": "^4.13.0",
     "typedarray": "~0.0.6"
   },
   "scripts": {
-    "test": "node test"
+    "test": "browserify -r .:stream test | node -"
   },
   "repository": {
     "type": "git",
