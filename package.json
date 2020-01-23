@@ -10,11 +10,11 @@
   "devDependencies": {
     "browserify": "^16.5.0",
     "safe-buffer": "^5.1.2",
-    "tape": "^4.13.0",
-    "typedarray": "~0.0.6"
+    "source-map-support": "^0.5.16",
+    "tape": "^4.13.0"
   },
   "scripts": {
-    "test": "browserify -r .:stream test | node -"
+    "test": "browserify -d -r .:stream test -o test/bundle.js && tape -r source-map-support/register test/bundle.js"
   },
   "repository": {
     "type": "git",
