@@ -1,6 +1,6 @@
 var test = require('tape');
-var pipeline = require('stream').pipeline;
-var stream = require('stream');
+var pipeline = require('..').pipeline;
+var stream = require('..');
 var Buffer = require('safe-buffer').Buffer;
 
 test('supports pipeline', function(t) {
