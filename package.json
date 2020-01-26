@@ -8,8 +8,10 @@
     "readable-stream": "^3.5.0"
   },
   "devDependencies": {
+    "airtap": "^1.0.2",
     "safe-buffer": "^5.1.2",
-    "tape": "^4.13.0"
+    "tape": "^4.13.0",
+    "through": "^2.3.8"
   },
   "scripts": {
     "test": "node test"
