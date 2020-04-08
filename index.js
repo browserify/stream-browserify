@@ -26,10 +26,15 @@ var inherits = require('inherits');
 
 inherits(Stream, EE);
 Stream.Readable = require('readable-stream/readable.js');
+inherits(Stream.Readable, Stream);
 Stream.Writable = require('readable-stream/writable.js');
+inherits(Stream.Writable, Stream);
 Stream.Duplex = require('readable-stream/duplex.js');
+inherits(Stream.Duplex, Stream);
 Stream.Transform = require('readable-stream/transform.js');
+inherits(Stream.Transform, Stream);
 Stream.PassThrough = require('readable-stream/passthrough.js');
+inherits(Stream.PassThrough, Stream);
 
 // Backwards-compat with node 0.4.x
 Stream.Stream = Stream;
