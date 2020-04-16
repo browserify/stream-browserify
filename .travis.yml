@@ -1,4 +1,5 @@
-sudo: false
+os: linux
+dist: bionic
 language: node_js
 node_js:
   - 'stable'
@@ -9,3 +10,13 @@ node_js:
   - '8'
   - '6'
   - '4'
+
+jobs:
+  include:
+    - name: Run browser tests with airtap
+      node_js: stable
+      script: npm run test:browsers
+      addons:
+        sauce_connect: true
+        hosts:
+          - airtap.local

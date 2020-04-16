@@ -14,7 +14,8 @@
     "through": "^2.3.8"
   },
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "test:browsers": "airtap -- test/index.js"
   },
   "repository": {
     "type": "git",
