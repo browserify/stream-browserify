@@ -1,16 +1,6 @@
 os: linux
 dist: bionic
 language: node_js
-node_js:
-  - 'stable'
-  - '12'
-  - '11'
-  - '10'
-  - '9'
-  - '8'
-  - '6'
-  - '4'
-
 jobs:
   include:
     - name: Run browser tests with airtap
@@ -20,3 +10,15 @@ jobs:
         sauce_connect: true
         hosts:
           - airtap.local
+    - name: Test on stable Node.js
+      node_js: stable
+    - name: Test on Node.js 12.x
+      node_js: 12
+    - name: Test on Node.js 10.x
+      node_js: 10
+    - name: Test on Node.js 8.x
+      node_js: 8
+    - name: Test on Node.js 6.x
+      node_js: 6
+    - name: Test on Node.js 4.x
+      node_js: 4
