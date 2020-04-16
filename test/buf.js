@@ -2,7 +2,7 @@ var path = require('path');
 var test = require('tape');
 var Buffer = require('safe-buffer').Buffer;
 
-var Writable = require('../').Writable;
+var Writable = require('..').Writable;
 var inherits = require('inherits');
 
 inherits(TestWritable, Writable);

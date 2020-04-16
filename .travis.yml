@@ -1,16 +1,24 @@
-sudo: false
+os: linux
+dist: bionic
 language: node_js
-node_js:
-  - 'stable'
-  - '10'
-  - '9'
-  - '8'
-  - '6'
-  - '4'
-  - '0.12'
-  - '0.10'
-  - '0.8'
-before_install:
-  # Old npm certs are untrusted https://github.com/npm/npm/issues/20191
-  - 'if [ "${TRAVIS_NODE_VERSION}" = "0.6" ] || [ "${TRAVIS_NODE_VERSION}" = "0.8" ]; then export NPM_CONFIG_STRICT_SSL=false; fi'
-  - 'nvm install-latest-npm'
+jobs:
+  include:
+    - name: Run browser tests with airtap
+      node_js: stable
+      script: npm run test:browsers
+      addons:
+        sauce_connect: true
+        hosts:
+          - airtap.local
+    - name: Test on stable Node.js
+      node_js: stable
+    - name: Test on Node.js 12.x
+      node_js: 12
+    - name: Test on Node.js 10.x
+      node_js: 10
+    - name: Test on Node.js 8.x
+      node_js: 8
+    - name: Test on Node.js 6.x
+      node_js: 6
+    - name: Test on Node.js 4.x
+      node_js: 4
