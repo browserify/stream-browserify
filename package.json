@@ -5,12 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "inherits": "~2.0.4",
-    "readable-stream": "^3.5.0"
+    "readable-stream": "^4.3.0"
   },
   "devDependencies": {
-    "airtap": "^1.0.2",
-    "safe-buffer": "^5.1.2",
-    "tape": "^4.13.0",
+    "airtap": "^4.0.4",
+    "safe-buffer": "^5.2.1",
+    "tape": "^5.6.3",
     "through": "^2.3.8"
   },
   "scripts": {
